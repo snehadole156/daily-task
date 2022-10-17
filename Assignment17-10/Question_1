@@ -1,0 +1,83 @@
+/*Interface:
+------------
+WAP using interface to create a process where you have to do the following process:
+1:Display the Basic info of an employee (name,phno,email,address,DOB)
+2:Display the Details of emp_info (Emp_id,dep,des,location,salary)
+
+Interface 1 method ()
+
+2 class same interface
+
+1 st class(Basic info)
+2 nd class(EMP Info)*/
+package Interface;
+
+public interface Emp_basic_info {
+	
+public void A ();
+
+}
+--------------
+package Interface;
+import java.util.Scanner;
+public class EMP_info implements Emp_basic_info {
+
+	@Override
+	public void A() {
+		// TODO Auto-generated method stub
+		String name, address,email;
+		double pNo,DOB;
+		Scanner sc=new Scanner (System.in);
+	
+		System.out.println("Enter the Name ");
+		name=sc.next();	
+		System.out.println("Enter the Email id ");
+		email=sc.next();
+		System.out.println("Enter the Address ");
+		address=sc.next();
+		System.out.println("Enter the  Phone Number ");
+		pNo=sc.nextDouble();
+		System.out.println("Enter the Date of Birth ");
+		DOB=sc.nextDouble();
+		
+		
+	}
+	-------------------------
+  package Interface;
+import java.util.Scanner;
+public class EPMP_basic_info2 implements Emp_basic_info {
+
+	@Override
+	public void A() {
+		// TODO Auto-generated method stub
+		int salary;
+		String dep,des,location,Emp_id;
+		Scanner sc=new Scanner(System.in);
+
+      
+		System.out.println("Enter the Employee Id ");
+		Emp_id=sc.next();
+		System.out.println("Enter the Department");
+		dep=sc.next();
+		System.out.println("Enter the Designation");
+		des=sc.next();
+		System.out.println("Enter the Location ");
+		location=sc.next();
+		System.out.println("Enter the salary ");
+		salary=sc.nextInt();
+	}
+
+}
+-----------package Interface;
+
+public class Employee_Detail {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EMP_info b=new EMP_info();
+		b.A();
+		EPMP_basic_info2 E=new EPMP_basic_info2();
+          E.A();
+	}
+
+}
