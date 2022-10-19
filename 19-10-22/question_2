@@ -1,0 +1,34 @@
+package package1;
+import java.util.Scanner;
+public class Box_Unibox_Demo {
+	Scanner sc=new Scanner(System.in);
+	int a;
+	void boxing(){
+		System.out.println("Enter the value of a :");
+		a=sc.nextInt();
+		Integer it=new Integer(a);
+		if(it>0) {
+			System.out.println("The number is positive");
+		}
+		else {
+			System.out.println("The number is negative");
+		}
+	}
+	void unboxing(){
+		System.out.println("Enter the value of a :");
+		Integer it1=sc.nextInt();
+		int a=it1;
+		if(a%3==0) {
+			System.out.println("The number is divisible by 3");
+		}
+		else {
+			System.out.println("The number is not divisible by 3");
+		}
+	}	
+
+public static void main(String[] args) {
+	Box_Unibox_Demo h=new Box_Unibox_Demo();
+	h.boxing();
+	h.unboxing();
+}
+}
