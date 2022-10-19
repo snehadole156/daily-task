@@ -1,0 +1,32 @@
+package package1;
+import java.util.Scanner;
+public class G_C_demo {
+		Scanner sc=new Scanner(System.in);
+
+  		int a=sc.nextInt();
+		int b=sc.nextInt();
+	public void finalize()
+	{
+		if(a>b)
+		{
+			System.out.println(a+"is largest number");
+			
+		}
+		else
+		{
+			System.out.println(b+"is largest number");
+		}
+	}
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		System.out.println("Enter the two number");
+		G_C_demo obj=new G_C_demo();
+		obj=null;
+		System.gc();
+		
+
+	}
+
+}
